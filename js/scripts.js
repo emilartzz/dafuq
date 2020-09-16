@@ -71,12 +71,13 @@ function pauseText(){
     wordPause = true;
     mainText.removeClass('animated')
     $('#pausedText').css("color", "rgba(250, 133, 120, 0.9)");
-    $('.mainBrand').css("color", "rgba(250, 133, 120, 0.9)");
+    mainText.css("color", "rgba(250, 133, 120, 0.9)");
 }
 
 function unPauseText(){
     wordPause = false;
     mainText.toggleClass('animated')
     $('#pausedText').css("color", "rgba(250, 133, 120, 0.1)");
+    mainText.css("color", "rgba(255,255,255,1)");
 }
 
