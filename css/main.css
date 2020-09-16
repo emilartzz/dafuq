@@ -11,7 +11,7 @@ html, body{
 
 ::selection{
     background-color: transparent;
-    color: white;
+    color: rgba(0, 0, 0, 0.3)   ;
 }
 
 .mainBrand{
