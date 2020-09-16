@@ -27,9 +27,53 @@ var wordsList = [
     "Fair suck of the sav"
 ];
 
-$('.mainBrand').click(function (){
+var whatText;
+var wordPause = false;
+var mainText = $('.mainBrand');
+var html = $('html');
 
-    var whatText = Math.floor(Math.random() * 26);
+mainText.click(function (){
 
-    $('.mainBrand').text(wordsList[whatText]);
+
+    if (wordPause == true) {
+        unPauseText();
+    } else {
+        pauseText();
+    }
+
 });
+
+html.click(function (){
+
+    wordChanger();
+
+});
+
+function wordChanger() {
+
+    if (wordPause == true) {
+
+        return;
+        
+    }
+    else if (wordPause == false){
+        whatText = Math.floor(Math.random() * 26);
+
+        mainText.text(wordsList[whatText]);
+    }
+    else{
+        mainText.text("Error 2b67ab");
+    }
+    
+}
+
+function pauseText(){
+    wordPause = true;
+    mainText.removeClass('animated')
+}
+
+function unPauseText(){
+    wordPause = false;
+    mainText.toggleClass('animated')
+}
+
