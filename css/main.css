@@ -14,10 +14,9 @@ html, body{
     color: white;
 }
 
-h1{
+.mainBrand{
     text-align: center;
     cursor: pointer;
-    color: whitesmoke;
     font-size: 52px;
     margin-top: 20%;
     transition: all 1s ease-in-out;
